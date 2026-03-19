@@ -1,0 +1,226 @@
+/*
+ * styles.qss
+ * Bảng style "Modern Dark/Light" cho Ứng dụng QC Manager v3
+ * (Thiết kế phẳng, hiện đại, trang nhã)
+ */
+
+/* ============================================================================
+   CÀI ĐẶT CHUNG (GLOBAL)
+   ============================================================================ */
+QWidget {
+    font-family: "Segoe UI", "Arial", sans-serif; /* Font hiện đại, sạch sẽ */
+    font-size: 10pt;
+    background-color: #F5F5F5; /* Nền xám rất nhạt cho toàn ứng dụng */
+    color: #212121; /* Màu chữ chính (đen than) */
+}
+
+QMainWindow {
+    background-color: #F5F5F5;
+}
+
+/* ============================================================================
+   SIDEBAR (THANH BÊN) - TỐI
+   ============================================================================ */
+QFrame#Sidebar {
+    background-color: #2C3E50; /* Xanh đen (Elegant Dark) */
+}
+
+QLabel#AppTitle {
+    font-weight: bold;
+    font-size: 18pt;
+    color: #ECF0F1; /* Trắng ngà */
+    padding-bottom: 5px;
+    background-color: transparent;
+}
+
+QLabel#AppSubtitle {
+    font-size: 10pt;
+    color: #BDC3C7; /* Xám nhạt */
+    background-color: transparent;
+}
+
+/* --- Nút Sidebar (Phẳng) --- */
+QPushButton#SidebarButton {
+    background-color: transparent;
+    border: none;
+    color: #ECF0F1; /* Chữ trắng ngà */
+    padding: 12px 18px;
+    text-align: left;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+QPushButton#SidebarButton:hover {
+    background-color: #34495E; /* Nền đậm hơn khi hover */
+}
+
+QPushButton#SidebarButton:checked {
+    background-color: #0078D4; /* Màu xanh nhấn (Hiện đại) */
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Nút bị vô hiệu hóa bởi admin (Rõ ràng) */
+QPushButton#SidebarButton[disabledByAdmin="true"] {
+    color: #7F8C8D; /* Màu xám mờ */
+    background-color: #2C3E50;
+    font-style: italic;
+}
+QPushButton#SidebarButton[disabledByAdmin="true"]:hover {
+    background-color: #2C3E50; /* Không đổi màu khi hover */
+}
+
+/* --- ISO Badge (ở cuối sidebar) --- */
+QFrame#IsoBadge {
+    background-color: #34495E;
+    border: 1px solid #4E6D8C;
+    border-radius: 5px;
+    padding: 10px;
+}
+QFrame#IsoBadge QLabel {
+    color: #ECF0F1;
+    background-color: transparent;
+}
+
+/* ============================================================================
+   KHU VỰC NỘI DUNG CHÍNH (PAGE AREA) - SÁNG
+   ============================================================================ */
+QStackedWidget > QWidget {
+    background-color: #FFFFFF; /* Nền trắng cho các trang nội dung */
+    border-left: 1px solid #DCDCDC;
+}
+
+/* --- Tabs --- */
+QTabWidget::pane {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-top: none;
+}
+QTabBar::tab {
+    padding: 10px 20px;
+    background-color: #F0F0F0; /* Nền tab (chưa chọn) */
+    border: 1px solid #DCDCDC;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-weight: 500;
+}
+QTabBar::tab:hover {
+    background-color: #E0E0E0;
+}
+QTabBar::tab:selected {
+    background-color: #FFFFFF; /* Tab được chọn có nền trắng (liền mạch) */
+    color: #0078D4; /* Màu nhấn */
+    font-weight: bold;
+    border-bottom: 2px solid #FFFFFF; /* Che viền của pane */
+    margin-bottom: -1px;
+}
+
+/* --- Tiêu đề (Placeholder) --- */
+QLabel#PageTitle {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #005A9E; /* Xanh đậm */
+    padding-bottom: 10px;
+}
+
+/* ============================================================================
+   WIDGETS CHUNG (PHẲNG)
+   ============================================================================ */
+
+/* --- Nút bấm (QPushButton) --- */
+QPushButton {
+    background-color: #0078D4; /* Xanh dương (Màu nhấn) */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background-color: #005A9E; /* Xanh đậm hơn */
+}
+QPushButton:pressed {
+    background-color: #004578; /* Xanh tối */
+}
+QPushButton:disabled {
+    background-color: #BDBDBD;
+    color: #757575;
+}
+
+/* --- Bảng (QTableWidget) --- */
+QTableWidget {
+    border: 1px solid #E0E0E0;
+    gridline-color: #EAEAEA; /* Lưới mờ */
+    background-color: #FFFFFF;
+    alternate-background-color: #F9F9F9; /* Màu xen kẽ (dễ phân biệt) */
+}
+QHeaderView::section {
+    background-color: #F5F7FA;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #0078D4; /* Đường kẻ xanh ở dưới header */
+}
+QTableWidget::item {
+    padding: 6px;
+}
+QTableWidget::item:selected {
+    background-color: #D4EAF7; /* Màu xanh nhạt khi chọn dòng */
+    color: #212121;
+}
+
+/* --- Trường nhập liệu (QLineEdit, QComboBox, QSpinBox, QDateEdit) --- */
+QLineEdit, QComboBox, QSpinBox, QDateEdit {
+    padding: 6px;
+    border: 1px solid #BDC3C7; /* Viền xám */
+    border-radius: 4px;
+    background-color: white;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus, QDateEdit:focus {
+    border: 2px solid #0078D4; /* Viền xanh khi focus (Rõ ràng) */
+    padding: 5px; /* Bù lại cho border 2px */
+}
+QLineEdit:read-only {
+    background-color: #F0F0F0;
+    color: #777;
+    border: 1px solid #DCDCDC;
+}
+
+/* --- Group Box --- */
+QGroupBox {
+    font-weight: bold;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px 0 5px;
+    left: 10px;
+    background-color: #FFFFFF; /* Nền tiêu đề trùng nền groupbox */
+    color: #005A9E;
+}
+
+/* ============================================================================
+   MÀU TRẠNG THÁI (DỄ PHÂN BIỆT)
+   ============================================================================ */
+/* (Dùng cho HSD Banner và Bảng) */
+
+/* Hết hạn / Lỗi */
+QWidget#QCExpiryBanner[status="expired"] {
+    background-color: #D9534F; /* Đỏ */
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Sắp hết hạn / Cảnh báo */
+QWidget#QCExpiryBanner[status="near_expiry"] {
+    background-color: #F0AD4E; /* Vàng */
+    color: #333333;
+    border-radius: 4px;
+    font-weight: bold;
+}

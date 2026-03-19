@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file alias="icons/left_arrow.svg">app/assets/icons/left_arrow.svg</file>
+        <file alias="icons/right_arrow.svg">app/assets/icons/right_arrow.svg</file>
+        <file alias="logo.png">app/assets/logo.png</file>
+        <file alias="logo.ico">app/assets/logo.ico</file>
+    </qresource>
+</RCC>

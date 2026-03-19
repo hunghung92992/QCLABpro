@@ -1,0 +1,118 @@
+# ==========================================
+# 1. PYTHON & MÔI TRƯỜNG ẢO
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# ==========================================
+# 2. FILE CƠ SỞ DỮ LIỆU LOCAL (CỰC QUAN TRỌNG)
+# ==========================================
+# Tuyệt đối không push file DB thật lên Git
+*.db
+*.sqlite
+*.sqlite3
+*-shm
+*-wal
+qclab_manager.db
+Datauser.db
+debug_db.txt
+
+# ==========================================
+# 3. FILE SINH RA KHI APP CHẠY (RUNTIME DATA)
+# ==========================================
+config.json
+sync_state.json
+logs/
+*.log
+backups/
+*.bak
+data/
+
+# ==========================================
+# 4. THƯ MỤC BUILD & ĐÓNG GÓI (DEPLOYMENT)
+# ==========================================
+build/
+dist/
+Output/
+*.spec
+*.exe
+
+# ==========================================
+# 5. CẤU HÌNH IDE (PyCharm / VSCode)
+# ==========================================
+.idea/
+.vscode/
+
+# ==========================================
+# 6. CACHE / TOOLING / TEST
+# ==========================================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+coverage/
+htmlcov/
+.coverage
+.cache/
+
+# ==========================================
+# 7. FILE HỆ ĐIỀU HÀNH
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# 8. FILE TẠM / BACKUP EDITOR
+# ==========================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.orig
+
+# ==========================================
+# 9. FILE EXPORT / REPORT PHỤ TRỢ
+# ==========================================
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.docx
+
+# Nếu bạn MUỐN giữ các file mẫu trong docs/ hoặc resources/,
+# hãy comment các dòng trên và ignore theo thư mục cụ thể thay vì theo extension.
+
+# ==========================================
+# 10. FILE ZIP / GÓI NÉN TẠM
+# ==========================================
+*.zip
+*.7z
+*.rar
+
+# ==========================================
+# 11. NHẬT KÝ / DỮ LIỆU RUNTIME KHÁC
+# ==========================================
+*.pid
+*.seed
+*.out
+*.err
+
+# ==========================================
+# 12. CHẶN THƯ MỤC BUILD RIÊNG NẾU CÓ
+# ==========================================
+release/
+artifacts/
+
+# ==========================================
+# 13. GIỮ LẠI FILE MẪU QUAN TRỌNG
+# ==========================================
+!config.example.json
+!sync_state.example.json
+!.gitignore
+!README.md
